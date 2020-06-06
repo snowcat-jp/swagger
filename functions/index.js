@@ -49,7 +49,7 @@ const swaggerJSDoc = require('swagger-jsdoc');
  *               description: エラー・メッセージ
  *               example: weightは必須です
  */
-exports.getHealthcare = functions.https.onRequest((request, response) => {
+exports.getHealthcareSample = functions.https.onRequest((request, response) => {
  if(typeof(request.query.weight) == "undefined") {
   response.status(400).json({"error_message": "weightは必須です"});
   return;
