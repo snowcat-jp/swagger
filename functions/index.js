@@ -86,6 +86,7 @@ var options = {
    description: "身長と体重を渡すとBMI,適正体重、肥満度を返してくれます",
    version: "1.0.0."
   },
+  host: "us-central1-snowcat-swagger.cloudfunctions.net",
   basePath: '/',
   schemes: ["https"],
  },
