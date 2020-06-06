@@ -72,26 +72,9 @@ function getMedicalParams(weight, height) {
   // 適正体重の算出
   var suitable_weight = (height * height * 22) / 10000;
 
-  // 肥満度の判定
-  var degree_of_obesity = "";
-  if(bmi < 18.5) {
-    degree_of_obesity = "痩せている";
-  } else if(bmi < 25) {
-    degree_of_obesity = "普通";
-  } else if(bmi < 30) {
-    degree_of_obesity = "肥満Lv1";
-  } else if(bmi < 35) {
-    degree_of_obesity = "肥満Lv2";
-  } else if(bmi < 40) {
-    degree_of_obesity = "肥満Lv3";
-  } else {
-    degree_of_obesity = "肥満Lv4";
-  }
-
   return {
     "bmi":bmi,
-    "suitable_weight":suitable_weight,
-    "degree_of_obesity":  degree_of_obesity
+    "suitable_weight":suitable_weight
   };
 }
 
@@ -103,7 +86,6 @@ var options = {
    description: "身長と体重を渡すとBMI,適正体重、肥満度を返してくれます",
    version: "1.0.0."
   },
-//   host: "us-central1-snowcat-swagger.cloudfunctions.net",
   basePath: '/',
   schemes: ["https"],
  },
