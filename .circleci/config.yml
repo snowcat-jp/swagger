@@ -9,11 +9,8 @@ jobs:
           name: npm install
           command: npm —prefix ./functions install ./functions
       - run:
-          name: build
-          command: npm run build
-      - run:
           name: deploy to Firebase Hosting
-          command: ./node_modules/.bin/firebase deploy --token=$FIREBASE_TOKEN
+          command: ./node_modules/.bin/firebase deploy --token=$FIREBASE_TOKEN  --only functions
 
 workflows:
   version: 2
